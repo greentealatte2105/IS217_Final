@@ -4,6 +4,9 @@
  */
 package ProjectCafe;
 
+import java.awt.Color;
+import java.awt.Font;
+
 /**
  *
  * @author dothinhtpr247gmai.com
@@ -15,6 +18,7 @@ public class Signup extends javax.swing.JFrame {
      */
     public Signup() {
         initComponents();
+        setBackground(new Color(0,0,0,0));
     }
 
     /**
@@ -26,57 +30,259 @@ public class Signup extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelBorder1 = new swing.PanelBorder();
+        footerLogin1 = new component.footerLogin();
+        jLabel3 = new javax.swing.JLabel();
+        lbLogin = new javax.swing.JLabel();
+        lbWelcome = new javax.swing.JLabel();
+        logo = new component.logo();
+        jLabel2 = new javax.swing.JLabel();
+        bSignup = new swing.Button();
+        txtPhone = new javax.swing.JTextField();
+        txtConfirm = new javax.swing.JPasswordField();
+        txtMail = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
+        txtUsername2 = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("SignupFrame"); // NOI18N
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(369, 558));
+
+        panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
+
+        footerLogin1.setBackground(new java.awt.Color(61, 139, 104));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Montserrat", 0, 13)); // NOI18N
+        jLabel3.setText("Do you have an account?");
+
+        lbLogin.setBackground(new java.awt.Color(0, 0, 0));
+        lbLogin.setFont(new java.awt.Font("Montserrat", 1, 13)); // NOI18N
+        lbLogin.setForeground(new java.awt.Color(255, 255, 255));
+        lbLogin.setText("Login here");
+        lbLogin.setName("loginLabel"); // NOI18N
+        lbLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbLoginMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbLoginMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbLoginMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout footerLogin1Layout = new javax.swing.GroupLayout(footerLogin1);
+        footerLogin1.setLayout(footerLogin1Layout);
+        footerLogin1Layout.setHorizontalGroup(
+            footerLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(footerLogin1Layout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbLogin)
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
+        footerLogin1Layout.setVerticalGroup(
+            footerLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(footerLogin1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(footerLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel3)
+                    .addComponent(lbLogin))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        lbWelcome.setBackground(new java.awt.Color(255, 255, 255));
+        lbWelcome.setFont(new java.awt.Font("Montserrat", 1, 32)); // NOI18N
+        lbWelcome.setForeground(new java.awt.Color(138, 131, 122));
+        lbWelcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbWelcome.setText("Welcome!");
+
+        logo.setAlignmentY(0.0F);
+
+        jLabel2.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(193, 187, 175));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Create your account");
+
+        bSignup.setBackground(new java.awt.Color(61, 139, 104));
+        bSignup.setForeground(new java.awt.Color(255, 255, 255));
+        bSignup.setText("SIGN UP");
+        bSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSignupActionPerformed(evt);
+            }
+        });
+
+        txtPhone.setFont(new java.awt.Font("Montserrat", 0, 13)); // NOI18N
+        txtPhone.setForeground(new java.awt.Color(138, 131, 122));
+        txtPhone.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Phone", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Montserrat", 0, 13), new java.awt.Color(193, 187, 175))); // NOI18N
+        txtPhone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPhoneActionPerformed(evt);
+            }
+        });
+
+        txtConfirm.setFont(new java.awt.Font("Montserrat", 0, 13)); // NOI18N
+        txtConfirm.setForeground(new java.awt.Color(138, 131, 122));
+        txtConfirm.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Confirm Password", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Montserrat", 0, 13), new java.awt.Color(193, 187, 175))); // NOI18N
+
+        txtMail.setFont(new java.awt.Font("Montserrat", 0, 13)); // NOI18N
+        txtMail.setForeground(new java.awt.Color(138, 131, 122));
+        txtMail.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "E-mail", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Montserrat", 0, 13), new java.awt.Color(193, 187, 175))); // NOI18N
+        txtMail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMailActionPerformed(evt);
+            }
+        });
+
+        txtPassword.setFont(new java.awt.Font("Montserrat", 0, 13)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(138, 131, 122));
+        txtPassword.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Password", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Montserrat", 0, 13), new java.awt.Color(193, 187, 175))); // NOI18N
+
+        txtUsername2.setFont(new java.awt.Font("Montserrat", 0, 13)); // NOI18N
+        txtUsername2.setForeground(new java.awt.Color(138, 131, 122));
+        txtUsername2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "User name", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Montserrat", 0, 13), new java.awt.Color(193, 187, 175))); // NOI18N
+        txtUsername2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsername2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
+        panelBorder1.setLayout(panelBorder1Layout);
+        panelBorder1Layout.setHorizontalGroup(
+            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(footerLogin1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lbWelcome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelBorder1Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addComponent(txtUsername2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(bSignup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtConfirm)
+                            .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelBorder1Layout.createSequentialGroup()
+                                .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtMail)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(148, 148, 148))
+        );
+        panelBorder1Layout.setVerticalGroup(
+            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbWelcome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(txtUsername2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bSignup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(footerLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        txtConfirm.getAccessibleContext().setAccessibleName("Confirm Password");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lbLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbLoginMouseClicked
+        // TODO add your handling code here:
+        System.out.println("ProjectCafe.Login.lbSignupMouseClicked()");
+        setVisible(false);
+        new Login().setVisible(true);
+    }//GEN-LAST:event_lbLoginMouseClicked
+
+    private void lbLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbLoginMouseEntered
+        // TODO add your handling code here:
+        lbLogin.setFont(new Font("Montserrat", Font.PLAIN, 13));
+    }//GEN-LAST:event_lbLoginMouseEntered
+
+    private void lbLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbLoginMouseExited
+        // TODO add your handling code here:
+        lbLogin.setFont(new Font("Montserrat", Font.BOLD, 13));
+    }//GEN-LAST:event_lbLoginMouseExited
+
+    private void bSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSignupActionPerformed
+        // TODO add your handling code here:
+        String user = txtPhone.getText();
+        String pass = String.valueOf(txtConfirm.getPassword());
+        String confirm = String.valueOf(txtConfirm.getPassword());
+
+        if (user.equals("admin") && pass.equals("admin"))
+        {
+            System.out.println("ProjectCafe.Login.bLoginActionPerformed()");
+            setVisible(false);
+
+        }
+    }//GEN-LAST:event_bSignupActionPerformed
+
+    private void txtPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPhoneActionPerformed
+
+    private void txtMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMailActionPerformed
+
+    private void txtUsername2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsername2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsername2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Signup().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private swing.Button bSignup;
+    private component.footerLogin footerLogin1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lbLogin;
+    private javax.swing.JLabel lbWelcome;
+    private component.logo logo;
+    private swing.PanelBorder panelBorder1;
+    private javax.swing.JPasswordField txtConfirm;
+    private javax.swing.JTextField txtMail;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtPhone;
+    private javax.swing.JTextField txtUsername2;
     // End of variables declaration//GEN-END:variables
 }

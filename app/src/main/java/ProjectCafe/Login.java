@@ -40,8 +40,10 @@ public class Login extends javax.swing.JFrame {
         txtUsername = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         lbForgot = new javax.swing.JLabel();
+        logo = new component.logo();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("LoginFrame"); // NOI18N
         setUndecorated(true);
 
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
@@ -50,12 +52,12 @@ public class Login extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Montserrat", 0, 13)); // NOI18N
-        jLabel3.setText("Do you have an account?");
+        jLabel3.setText("Don't have an account?");
 
         lbSignup.setBackground(new java.awt.Color(0, 0, 0));
         lbSignup.setFont(new java.awt.Font("Montserrat", 1, 13)); // NOI18N
         lbSignup.setForeground(new java.awt.Color(255, 255, 255));
-        lbSignup.setText("Sign up");
+        lbSignup.setText("Sign up here");
         lbSignup.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbSignupMouseClicked(evt);
@@ -73,20 +75,20 @@ public class Login extends javax.swing.JFrame {
         footerLogin1Layout.setHorizontalGroup(
             footerLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, footerLogin1Layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68))
+                .addComponent(lbSignup)
+                .addGap(58, 58, 58))
         );
         footerLogin1Layout.setVerticalGroup(
             footerLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(footerLogin1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(footerLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(lbSignup))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(footerLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lbSignup)
+                    .addComponent(jLabel3))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         bLogin.setBackground(new java.awt.Color(61, 139, 104));
@@ -138,6 +140,8 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        logo.setAlignmentY(0.0F);
+
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
         panelBorder1.setLayout(panelBorder1Layout);
         panelBorder1Layout.setHorizontalGroup(
@@ -148,16 +152,23 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbForgot, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
-                    .addComponent(txtUsername)
-                    .addComponent(txtPassword))
+                    .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(bLogin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbForgot, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+                        .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtUsername, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(157, 157, 157))
         );
         panelBorder1Layout.setVerticalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addGap(46, 46, 46)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbWelcome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,6 +226,8 @@ public class Login extends javax.swing.JFrame {
     private void lbSignupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbSignupMouseClicked
         // TODO add your handling code here:
         System.out.println("ProjectCafe.Login.lbSignupMouseClicked()");
+        setVisible(false);
+        new Signup().setVisible(true);
     }//GEN-LAST:event_lbSignupMouseClicked
 
     private void lbSignupMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbSignupMouseEntered
@@ -241,6 +254,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel lbForgot;
     private javax.swing.JLabel lbSignup;
     private javax.swing.JLabel lbWelcome;
+    private component.logo logo;
     private swing.PanelBorder panelBorder1;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
