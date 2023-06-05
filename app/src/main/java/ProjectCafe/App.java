@@ -5,6 +5,7 @@ package ProjectCafe;
 
 public class App {
     public String getGreeting() {
+        //git test
         return "Hello World!";
     }
 
